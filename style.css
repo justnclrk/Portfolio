@@ -10,14 +10,34 @@ html, body {
     height: 100%;
     width: 100%;
 }
+
+@-webkit-keyframes movingbackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes movingbackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes movingbackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 body {
-    background: #360033;
-    background: -webkit-linear-gradient(to top, #0b8793, #360033);
-    background: linear-gradient(to top, #0b8793, #360033);
+    background: linear-gradient(270deg, #0b8793, #360033);
+    background-size: 400% 400%;
+    -webkit-animation: movingbackground 16s ease infinite;
+    -moz-animation: movingbackground 16s ease infinite;
+    animation: movingbackground 16s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 #header {
     display: inline-block;
