@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+ body {
+     margin: 0;
+     background-color: #1abc9c;
+     font-family: 'Work Sans', sans-serif;
+ }
+ nav {
+     overflow: hidden;
+     background: #bdc3c7;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     padding: 10px 0;
+     box-shadow: inset 0px 1px white;
+     /* box shadow */
+     /* -moz-box-shadow:    inset 0 0 2px #000000;
+     -webkit-box-shadow: inset 0 0 2px #000000;
+     box-shadow:         inset 0 0 2px #000000; */
+ }
+
+nav li {
+    list-style: none;
+}
+
+ .start {
+     float: left;
+     cursor: pointer;
+     margin-left: 5px;
+     padding: 5px 10px;
+     border: 1px;
+     border-style: solid;
+     border-color: white black black white;
+     font-weight: 300;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+ }
+
+.start:active {
+    border: 1px;
+    border-style: solid;
+    border-color: black white white black;
+}
+
+.time {
+    float: right;
+    margin: 0 5px;
+    border: 1px;
+    border-style: solid;
+    border-color: black white white black;
+    padding: 5px 10px;
+}
+
+nav li img {
+    width: 13px
+}
+
+.desktop {
+    color: white;
+    margin: 10px;
+}
+
+.desktop p {
+    margin-top: 0px;
+}
+
+.desktop div {
+    width: 100px;
+    text-align: center;
+}
