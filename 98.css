@@ -3,6 +3,11 @@
  body {
      margin: 0;
      background-color: #1abc9c;
+     background-image: url('logo.png');
+     background-position: center center;
+     background-size: 40vh;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
      font-family: 'Work Sans', sans-serif;
  }
  nav {
@@ -53,11 +58,8 @@ nav li {
     padding: 5px 10px;
 }
 
-nav li img {
-    width: 13px
-}
-
 .desktop {
+    position: relative;
     color: white;
     margin: 10px;
 }
@@ -71,10 +73,41 @@ nav li img {
     text-align: center;
 }
 
-.logo {
-    text-align: center;
+.icon_lg {
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 2px;
+}
+
+.icon_lg:hover {
+    border: 1px solid blue;
+    background-color: rgba(0, 0, 255, 0.1);
+    user-select: none;
+}
+
+.icon_sm {
+    width: 16px;
+}
+
+
+.window {
+    top: 60%;
+    left: 50%;
     position: absolute;
-    z-index: -1;
-    left: 10%;
-    top: 10%;
+    border: 1px;
+    border-style: solid;
+    border-color: white black black white;
+    padding: 5px;
+    background-color: #bdc3c7;
+}
+
+h5 {
+    background-color: #000080;
+    font-size: 15px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.blue {
+    background-color: blue;
 }
