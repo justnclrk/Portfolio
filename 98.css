@@ -18,20 +18,24 @@
      width: 100%;
      padding: 10px 0;
      box-shadow: inset 0px 1px white;
-     /* box shadow */
-     /* -moz-box-shadow:    inset 0 0 2px #000000;
-     -webkit-box-shadow: inset 0 0 2px #000000;
-     box-shadow:         inset 0 0 2px #000000; */
+     padding: 5px 0;
  }
 
-nav li {
+ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
- .start {
+li {
+    display: inline-block;
+}
+
+.start {
      float: left;
      cursor: pointer;
      margin-left: 5px;
+     margin-right: 10px;
      padding: 5px 10px;
      border: 1px;
      border-style: solid;
@@ -68,15 +72,26 @@ nav li {
     margin-top: 0px;
 }
 
-.desktop div {
-    width: 100px;
-    text-align: center;
+a {
+    text-decoration: none;
+}
+
+.email {
+    float: right;
+}
+
+.desktop a {
+    color: white;
 }
 
 .icon_lg {
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0);
     padding: 2px;
+    text-align: center;
+    width: 100px;
+    vertical-align: top;
+    display: inline-block;
 }
 
 .icon_lg:hover {
@@ -86,28 +101,74 @@ nav li {
 }
 
 .icon_sm {
-    width: 16px;
+    margin-top: 2px;
+    margin-right: 3px;
+    margin-left: 3px;
+    width: 14px;
 }
 
 
 .window {
-    top: 60%;
-    left: 50%;
+    display: none;
     position: absolute;
     border: 1px;
     border-style: solid;
     border-color: white black black white;
-    padding: 5px;
+    padding: 2px;
     background-color: #bdc3c7;
+    width: 400px;
+    height: 400px;
 }
 
-h5 {
+header {
     background-color: #000080;
-    font-size: 15px;
-    margin: 0;
-    font-weight: normal;
+    padding: 1px 1px 0px 1px;
+    user-select: none;
+    cursor: move;
 }
 
-.blue {
-    background-color: blue;
+header h5 {
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+.close {
+    border: 1px;
+    border-style: solid;
+    border-color: white black black white;
+    background-color: #bdc3c7;
+    color: black;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    vertical-align: top;
+    float: right;
+    margin-top: 2px;
+    margin-right: 3px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.content{
+    background: white;
+    color: black;
+    padding: 2px;
+    height: 93.5%;
+}
+
+.window .content .icon_lg {
+    display: inline-block;
+    color: black;
+}
+
+.taskbar {
+    display: none;
+    padding: 5px 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: black white white black;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8cODAf3t7ewbG/////z948CADAFuqCj64BtLKAAAAAElFTkSuQmCC);
 }

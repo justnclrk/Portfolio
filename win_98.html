@@ -7,35 +7,120 @@
     </head>
     <body>
         <nav>
-            <li class="start">
-                <span><img class="icon_sm" src="logo_sm.png"> Start</span>
-            </li>
-            <li class="time">
-                <span><img class="icon_sm" src="network.png"> <img class="icon_sm" src="speaker.png"> 8:08 PM</span>
-            </li>
+            <ul>
+                <li class="start">
+                    <span><img class="icon_sm" src="logo_sm.png"> Start</span>
+                </li>
+                <li class="taskbar about">
+                    <span>About Me</span>
+                </li>
+                <li class="taskbar projects">
+                    <span>Projects</span>
+                </li>
+                <li class="taskbar resume">
+                    <span>Resumé</span>
+                </li>
+                <li class="time">
+                    <span><img class="icon_sm" src="network.png"> <img class="icon_sm" src="loudspeaker.png"> 8:08 PM</span>
+                </li>
+            </ul>
         </nav>
+
         <div class="desktop">
-            <div class="icon_lg">
-                <img src="recycle_bin.png">
-                <p> Recycle Bin</p>
+            <p class="email"><a href="mailto:justnclrk@gmail.com" target="_blank">Contact Justin</a></p>
+            <!--DESKTOP ICONS-->
+            <div id="about" class="icon_lg">
+                <img src="notepad.png">
+                <p>About Justin</p>
             </div>
-            <div class="icon_lg">
-                <img src="computer.png">
-                <p>My Projects</p>
-            </div>
-            <div class="icon_lg">
+            <br>
+            <div id="projects" class="icon_lg">
                 <img src="directory.png">
-                <p>My Projects</p>
+                <p>Projects</p>
             </div>
-            <div class="icon_lg">
+            <br>
+            <div id="resume" class="icon_lg">
                 <img src="file.png">
-                <p>My Resumé</p>
+                <p>Resumé</p>
             </div>
-            <div class="window">
-                <h5><img class="icon_sm" src="directory.png"> Test Window</h5>
+            <br>
+            <a href="https://github.com/justnclrk" target="_blank">
+                <div class="icon_lg">
+                    <img src="console_prompt.png">
+                    <p>My Github</p>
+                </div>
+            </a>
+            <br>
+            <a href="https://www.linkedin.com/in/justin-clark-773415154/" target="_blank">
+                <div class="icon_lg">
+                    <img src="msie.png">
+                    <p>My LinkedIn</p>
+                </div>
+            </a>
+            <br>
+            <!--WINDOWS-->
+            <div id="window" class="about window">
+                <header>
+                    <img class="icon_sm" src="notepad.png"><h5>About Me</h5>
+                    <span class="close">X</span>
+                </header>
+                <div class="content">
+                    <p>I am a Chicago native who loves the challenge of problem solving, creating
+                        new experiences and Spotify.</p>
+                    <p>I started to
+                        learn code at the end of 2017
+                        (<span style="font-style: italic;">Coding Dojo</span>). After graduation from the
+                        bootcamp, I began to work on a project (<span
+                            style="font-style: italic;">AssignME</span>) that would help
+                        save a lot of time at my day job as a meeting coordinator.</p>
+                    <p>At home, I spend time with my wife, Sam, dog Scarlet, and two cats Steve and Spud. I
+                        am a huge Marvel Cinematic Universe fan! <small>(See MCU Rank in Projects)</small></p>
+                </div>
+            </div>
+            <div class="projects window">
+                <header>
+                    <img class="icon_sm" src="directory.png"><h5>Projects</h5>
+                    <span class="close">X</span>
+                </header>
+                <div class="content">
+                    <div class="icon_lg">
+                        <img src="file.png">
+                        <p>AssignMe</p>
+                    </div>
+                    <a href="https://www.mcurank.com" target="blank">
+                        <div class="icon_lg">
+                            <img src="msie.png">
+                            <p>MCU Rank</p>
+                        </div>
+                    </a>
+                    <a href="https://justnclrk.github.io/blasphemous/" target="blank">
+                        <div class="icon_lg">
+                            <img src="loudspeaker.png">
+                            <p>Soundboard</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
+            $(document).ready(function(){
+                $('.window').draggable();
+                $('.window').resizable();
+                $('.close').click(function(){
+                    $(this).parents('.window').hide()
+                    $(this).children('.taskbar').hide()
+                });
+                $('#about').click(function() {
+                    $(".about").show()
+                });
+                $('#projects').click(function() {
+                    $(".projects").show()
+                });
+
+            });
         </script>
+        <script>document.getElementById("window").style.resize = "both";</script>
     </body>
 </html>
